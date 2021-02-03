@@ -9,4 +9,5 @@ Here is a chore
 # commit fix
 And a fix
 
+# hot fix
 
