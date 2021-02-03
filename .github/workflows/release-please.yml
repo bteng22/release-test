@@ -16,6 +16,8 @@ jobs:
           package-name: release-please-action
       - name: debug
         run: |
+          echo "${{ steps.release }}"
+          echo "${{ steps.release.outputs }}"
           echo "${{ steps.release.outputs.release_created }}"
           echo "${{ steps.release.outputs.sha }}"
           echo "${{ steps.release.outputs.major }}"
