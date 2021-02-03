@@ -37,13 +37,11 @@ jobs:
           echo "second job"
           echo ${{ needs.release-please.outputs.release_created }}
   third-job:
-    needs: [release-please, second-job]
     runs-on: ubuntu-latest
     steps:
       - name: debug3
         run: |
           echo "third job"
-          echo ${{ needs.release-please.outputs.release_created }}
 
 
     
