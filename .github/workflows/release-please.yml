@@ -28,7 +28,7 @@ jobs:
           echo ${{ steps.release.outputs.minor }}
           echo ${{ steps.release.outputs.patch }}
   second-job:
-    if: ${{ needs.release-please.outputs.release_created }} 
+    if: needs.release-please.outputs.release_created
     needs: release-please
     runs-on: ubuntu-latest
     steps:
