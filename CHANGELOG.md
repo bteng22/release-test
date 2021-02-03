@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://www.github.com/bteng22/release-test/compare/v2.2.0...v2.2.1) (2021-02-03)
+
+
+### Bug Fixes
+
+* bug fix ([221d0e8](https://www.github.com/bteng22/release-test/commit/221d0e8a4a0f35d93b6dedb19c98718a7491006b))
+
+
+### Miscellaneous
+
+* debug for release-please ([c2d1620](https://www.github.com/bteng22/release-test/commit/c2d1620b9eb095370da83e0113bcc18abf2ee379))
+* updating release-please ([edb6b38](https://www.github.com/bteng22/release-test/commit/edb6b38a82481453fc032b4af11ec7a169c7ed05))
+
 ## [2.2.0](https://www.github.com/bteng22/release-test/compare/v2.1.0...v2.2.0) (2021-02-03)
 
 
