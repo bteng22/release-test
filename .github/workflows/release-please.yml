@@ -7,6 +7,8 @@ name: Tag for Release
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.output.release_created }}
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release
@@ -14,6 +16,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: release-please-action
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+
       - name: debug
         run: |
           echo "${{ steps.release }}"
@@ -23,4 +27,21 @@ jobs:
           echo "${{ steps.release.outputs.major }}"
           echo ${{ steps.release.outputs.minor }}
           echo ${{ steps.release.outputs.patch }}
+  second-job:
+    if: ${{ needs.update-changelog.outputs.release_created != true }}
+    needs: release-please
+    runs-on: ubuntu-latest
+    steps:
+      - name: debug2
+        run: |
+          echo "second job"
+  third-job:
+    needs: second-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: debug3
+        run: |
+          echo "third job"
+
+
     
