@@ -28,14 +28,14 @@ jobs:
           echo ${{ steps.release.outputs.minor }}
           echo ${{ steps.release.outputs.patch }}
   second-job:
-    if: ${{ needs.update-changelog.outputs.release_created != true }}
+    if: ${{ needs.release-please.outputs.release_created != true }}
     needs: release-please
     runs-on: ubuntu-latest
     steps:
       - name: debug2
         run: |
           echo "second job"
-          echo ${{ needs.update-changelog.outputs.release_created }}
+          echo ${{ needs.release-please.outputs.release_created }}
   third-job:
     needs: second-job
     runs-on: ubuntu-latest
