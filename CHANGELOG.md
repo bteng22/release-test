@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.7](https://www.github.com/bteng22/release-test/compare/v2.2.6...v2.2.7) (2021-02-05)
+
+
+### Miscellaneous
+
+* only show chores? ([3e7b6c4](https://www.github.com/bteng22/release-test/commit/3e7b6c4b38d27494a2181db6d8a899ef9fa4d241))
+
 ### [2.2.6](https://www.github.com/bteng22/release-test/compare/v2.2.5...v2.2.6) (2021-02-03)
 
 
